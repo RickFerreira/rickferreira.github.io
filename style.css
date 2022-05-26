@@ -23,9 +23,9 @@ html{
     transition: all 0.3s ease;
 }
 .navbar.sticky{
-    background-image: linear-gradient(50deg, #003566 0%, #005fb3 37%, #08b0df 65%, #003566 100%);
+    background-image: linear-gradient(50deg, #ffc300 0%, #3f3101  37%, #a17c02  65%, #000000 100%);
      padding: 15px 0;
-}
+} 
 .navbar .max-width{
     display: flex;
     align-items: center;
@@ -91,8 +91,8 @@ html{
 }
 .home .home-content a{
     display: inline-block;
-    background: linear-gradient(50deg, #003566 0%, #005fb3 37%, #003566 100%);
-    color: #fff;
+    background-image: linear-gradient(50deg, #a17c02 0%, #ffc300 37%, #ffc300 65%, #a17c02 100%);
+    color: #000;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
@@ -165,15 +165,15 @@ section .title::after{
     left: 50%;
     font-size: 20px;
     background: #fff;
-    color: #ffc300;
+    color: #bb8a04;
     padding: 5px;
     transform: translateX(-50%);
 }
-.about, .projects, .skills, .certificates, .contact, footer{
+.about, .certificates, .skills, .projects, .contact, footer{
     font-family: 'Roboto', sans-serif;
 }
 .about .about-content,
-.projects .serv-content,
+.certificates .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -200,11 +200,12 @@ section .title::after{
 }
 .about .about-content .right p{
     text-align: justify;
+    font-size: 18px;
 }
 .about .about-content .right a{
     display: inline-block;
-    background: linear-gradient(50deg, #003566 0%, #005fb3 37%, #003566 100%);
-    color: #fff;
+    background: linear-gradient(50deg, #a17c02 0%, #ffc300 37%, #ffc300 65%, #a17c02 100%);
+    color: #000;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
@@ -223,21 +224,21 @@ section .title::after{
     object-fit: cover;
     border-radius: 6px;
 }
-/*  sessão serviços */
-.projects, .certificates{
+/*  sessão certicados */
+.certificates, .projects{
     background: #111;
     color: #fff;
 }
-.projects .title::before,
-.certificates .title::before{
+.certificates .title::before,
+.projects .title::before{
     background: #fff;
 }
-.projects .title::after,
-.certificates .title::after{
+.certificates .title::after,
+.projects .title::after{
     background: #111;
-    content: "Que oferecemos";
+    content: "O que eu estudo";
 }
-.projects .serv-content .card{
+.certificates .serv-content .card{
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
@@ -246,30 +247,30 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.projects .serv-content .card:hover{
+.certificates .serv-content .card:hover{
     background: #ffc300;
 }
-.projects .serv-content .card .box{
+.certificates .serv-content .card .box{
     transition: all 0.3s ease;
 }
-.projects .serv-content .card:hover .box{
+.certificates .serv-content .card:hover .box{
     transform: scale(1.05);
 }
-.projects .serv-content .card ion-icon{
+.certificates .serv-content .card ion-icon{
     font-size: 70px;
     color: #ffc300;
 }
-.projects .serv-content .card:hover ion-icon{
+.certificates .serv-content .card:hover ion-icon{
     color: #fff;
 }
-.projects .serv-content .card .text{
+.certificates .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-/*  sessão especialidades  */
+/*  sessão tecnologias  */
 .skills .title::after{
-    content: "Que faço";
+    content: "O que eu uso";
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
@@ -324,36 +325,55 @@ section .title::after{
     left: 0;
     background: #ffc300;
 }
+/* tecnologias */
 .skills .skills-content .right .html::before{
     width: 93%;
 }
 .skills .skills-content .right .css::before{
-    width: 85%;
+    width: 90%;
 }
 .skills .skills-content .right .js::before{
-    width: 87%;
+    width: 90%;
 }
-.skills .skills-content .right .php::before{
-    width: 47%;
+.skills .skills-content .right .react::before{
+    width: 80%;
 }
-.skills .skills-content .right .mysql::before{
-    width: 42%;
+.skills .skills-content .right .typeScript::before{
+    width: 60%;
 }
-/*  sessão equipe  */
-.certificates .title::after{
-    content: "Especializada";
+.skills .skills-content .right .java::before{
+    width: 93%;
 }
-.certificates .carousel .card{
+.skills .skills-content .right .python::before{
+    width: 95%;
+}
+.skills .skills-content .right .c::before{
+    width: 70%;
+}
+.skills .skills-content .right .cplusplus::before{
+    width: 80%;
+}
+.skills .skills-content .right .arduinoIDE::before{
+    width: 75%;
+}
+.skills .skills-content .right .legoIDE::before{
+    width: 95%;
+}
+/*  sessão projetos */
+.projects .title::after{
+    content: "O que eu produzo";
+}
+.projects .carousel .card{
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
     transition: all 0.3s ease;
 }
-.certificates .carousel .card:hover{
+.projects .carousel .card:hover{
     background: #ffc300;
 }
-.certificates .carousel .card img{
+.projects .carousel .card img{
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -361,20 +381,20 @@ section .title::after{
     border: 5px solid #ffc300;
     transition: all 0.3s ease;
 }
-.certificates .carousel .card:hover img{
+.projects .carousel .card:hover img{
     border-color: #fff;
 }
-.certificates .carousel .card .box{
+.projects .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.certificates .carousel .card:hover .box{
+.projects .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.certificates .carousel .card .text{
+.projects .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -401,7 +421,7 @@ section .title::after{
 }
 /*  sessão Contato  */
 .contact .title::after{
-    content: "Fale conosco";
+    content: "Fale comigo";
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -578,7 +598,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .projects .serv-content .card {
+    .certificates .serv-content .card {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -601,7 +621,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .projects .serv-content .card {
+    .certificates .serv-content .card {
         width:100%;
     }
 }
