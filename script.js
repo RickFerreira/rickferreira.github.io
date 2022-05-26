@@ -16,17 +16,11 @@ $(document).ready(function(){
      });
 
      var typed = new Typed(".typing", {
-         strings:["YouTuber", "Desenvolvedor", "Designer", "Freelancer"],
-         typeSpeed:100,
-         backSpeed:60,
+         strings:["Desenvolvedor de software", "Estagiario da Synchro", "Técnico em Informática", "Engenheiro de Computação"],
+         typeSpeed:60,
+         backSpeed:30,
          loop:true
      });
-     var typed = new Typed(".typing-2", {
-        strings:["YouTuber", "Desenvolvedor", "Designer", "Freelancer"],
-        typeSpeed:100,
-        backSpeed:60,
-        loop:true
-    });
 
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
