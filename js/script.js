@@ -16,7 +16,7 @@ $(document).ready(function(){
      });
 
      var typed = new Typed(".typing", {
-         strings:["Desenvolvedor de software", "Estagiario da Synchro", "Técnico em Informática", "Engenheiro de Computação"],
+         strings:["Desenvolvedor de software", "Bolsista GoSyn4Tax", "Técnico em Informática", "Engenheiro de Computação"],
          typeSpeed:60,
          backSpeed:30,
          loop:true
