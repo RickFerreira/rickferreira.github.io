@@ -25,6 +25,27 @@ img[src]{
     transition: .5s ease-in-out;
 }
 
+/* ScrollBar Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ffc300 black ;
+  }
+  
+/* ScrollBar Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+background: black ;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: #ffc300;
+border-radius: 5px;
+border: 3px solid black ;
+}
+
 /*  navbar   inicio*/
 .navbar{
     position: fixed;
