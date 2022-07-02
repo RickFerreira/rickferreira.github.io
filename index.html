@@ -9,9 +9,14 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
+        <!--Cursor animado-->
+        <div class="cursor"></div>
+ 
         <div class="scroll-up-btn">
             <ion-icon name="chevron-up-outline"></ion-icon>
         </div>
+
+        <!--Navbar-->
         <div class="navbar">
             <div class="max-width">
                 <div class="logo"><a href="#">Rick<span>Ferreira</span></a></div>
@@ -298,6 +303,25 @@
             <span>Criado por <a href="#">Rick</a> | Todos os direitos reservado 2022</span>
             <p>Muito obrigado por ver meu portfólio completo, você acaba de achar um Easter egg, divirta-se!!</p>
         </footer>
+
+        <!-- Animação do cursor -->
+        <script type="text/javascript">
+            const cursor = document.querySelector(".cursor");
+
+            document.addEventListener("mousemove", (e) => {
+                let x = e.pageX;
+                let y = e.pageY;
+
+                cursor.style.top = y + "px";
+                cursor.style.left = x + "px";
+                cursor.style.display = "block";
+
+            });
+
+            document.addEventListener("mouseout", () => {
+                cursor.style.display = "none";
+            });
+        </script>
 
         <script src="./js/animacaoIMG.js"></script>
 
