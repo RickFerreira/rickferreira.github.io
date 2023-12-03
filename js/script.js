@@ -14,9 +14,10 @@ $(document).ready(function(){
      $('.scroll-up-btn').click(function(){
          $('html').animate({scrollTop: 0});
      });
+     
 
      var typed = new Typed(".typing", {
-         strings:["Desenvolvedor de software", "Bolsista GoSyn4Tax", "Técnico em Informática", "Engenheiro de Computação"],
+         strings:["Desenvolvedor de software", "Bolsista GoSyn4Tax", "Técnico em Informática", "Analista de Sistemas"],
          typeSpeed:60,
          backSpeed:30,
          loop:true
