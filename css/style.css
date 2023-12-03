@@ -166,7 +166,7 @@ body{
 .home .home-content a{
     display: inline-block;
     color: #ffc300;
-    background: rgb(29, 29, 29);
+    background: #222;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
@@ -406,45 +406,43 @@ section .title::after{
 
 /* tecnologias */
 .skills .skills-content .right .html::before{
-    width: 93%;
+    width: 80%;
 }
 .skills .skills-content .right .css::before{
-    width: 90%;
+    width: 75%;
 }
 .skills .skills-content .right .js::before{
-    width: 90%;
+    width: 70%;
 }
 .skills .skills-content .right .react::before{
-    width: 80%;
+    width: 70%;
 }
 .skills .skills-content .right .typeScript::before{
     width: 60%;
 }
 .skills .skills-content .right .java::before{
-    width: 93%;
+    width: 80%;
 }
 .skills .skills-content .right .python::before{
-    width: 95%;
+    width: 85%;
 }
 .skills .skills-content .right .c::before{
     width: 70%;
 }
 .skills .skills-content .right .cplusplus::before{
-    width: 80%;
+    width: 70%;
 }
 .skills .skills-content .right .arduinoIDE::before{
     width: 75%;
-}
-.skills .skills-content .right .legoIDE::before{
-    width: 95%;
 }
 
 /*  sessão projetos */
 .projects .title::after{
     content: "O que eu produzo";
 }
+
 .projects .carousel .card{
-    background: #222;
+    background: #333;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
