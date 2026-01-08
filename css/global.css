@@ -4,9 +4,6 @@
 :root {
     --font-1    : "Inter", sans-serif;
     --font-2    : "Manrope", sans-serif;
-
-    /* monospace
-     */
     --font-mono : Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
@@ -16,31 +13,24 @@
 :root {
 
     /* * MAPPING DA NOVA PALETA:
-     * color-1 (Primary Action): #e95d2c (Laranja Vivo)
-     * color-2 (Secondary Base): #1a2730 (Azul Profundo)
+     * color-1 (Primary Action): #e25134 (Laranja Vivo)
+     * color-2 (Secondary Base): #151c26 (Azul Profundo)
      */
-    --color-1                      : #e95d2c;
-    --color-2                      : #1a2730;
+    --color-1                      : #e25134;
+    --color-2                      : #151c26;
 
-    /* theme color variations
-     * (Ajustado para usar suas cores extras como variações)
-     */
-    --color-1-lightest             : #fcece8; /* Gerado para fundos suaves */
-    --color-1-lighter              : #fabfae; /* Gerado */
-    --color-1-light                : #f59275; /* Gerado */
-    --color-1-dark                 : #a63e1b; /* SUA PALETA (Ferrugem) - Perfeito para Hover */
-    --color-1-darker               : #8a3316; /* Gerado */
-    --color-1-darkest              : #6e2912; /* Gerado */
+    --color-1-lightest             : #fcece8;
+    --color-1-lighter              : #fabfae;
+    --color-1-light                : #f59275;
+    --color-1-dark                 : #a63e1b;
+    --color-1-darker               : #8a3316;
+    --color-1-darkest              : #6e2912;
+    --color-2-lightest             : #b0cee2;
+    --color-2-lighter              : #7c93a7;
+    --color-2-light                : #45586c;
+    --color-2-dark                 : #121b22;
+    --color-2-darker               : #0a0f13;
 
-    --color-2-lightest             : #b0cee2; /* SUA PALETA (Azul Claro) */
-    --color-2-lighter              : #7c93a7; /* Mix entre o claro e o médio */
-    --color-2-light                : #45586c; /* SUA PALETA (Azul Médio) */
-    --color-2-dark                 : #121b22; /* Gerado */
-    --color-2-darker               : #0a0f13; /* Gerado */
-
-    /* feedback colors
-     * (Mantidos os originais pois são funcionais, mas pode ajustar se quiser)
-     */
     --color-error                  : hsla(359, 100%, 91%, 1);
     --color-success                : hsla(76, 69%, 68%, 1);
     --color-info                   : hsla(205, 82%, 91%, 1);
@@ -50,14 +40,10 @@
     --color-info-content           : hsla(205, 32%, 31%, 1);
     --color-notice-content         : hsla(51, 30%, 30%, 1);
 
-    /* shades 
-     * Atualizado o Gray-19 (quase preto) para sua cor #424048
-     * para harmonizar o texto com a paleta.
-     */
     --color-black                  : #000000;
-    --color-gray-19                : #1a2730; /* Usando sua base escura principal */
+    --color-gray-19                : #151c26;
     --color-gray-18                : #2e363d;
-    --color-gray-17                : #424048; /* SUA PALETA (Cinza médio) */
+    --color-gray-17                : #424048;
     --color-gray-16                : #585857;
     --color-gray-15                : #6e6e6d;
     --color-gray-14                : #848383;
@@ -76,25 +62,19 @@
     --color-gray-1                 : #fcfbfb;
     --color-white                  : #ffffff;
 
-    /* text
-     */
     --color-text                   : var(--color-gray-19);
     --color-text-dark              : var(--color-black);
     --color-text-light             : var(--color-gray-14);
     --color-placeholder            : var(--color-gray-14);
 
-    /* buttons
-     */
     --color-btn                    : var(--color-gray-6);
     --color-btn-text               : var(--color-black);
     --color-btn-hover              : var(--color-gray-8);
     --color-btn-hover-text         : var(--color-gray-19);
-    
-    /* Botão Primário agora será seu Laranja (#e95d2c) */
+
     --color-btn-primary            : var(--color-1);
     --color-btn-primary-text       : var(--color-white);
-    
-    /* Hover do Primário agora será seu Ferrugem (#a63e1b) */
+
     --color-btn-primary-hover      : var(--color-1-dark); 
     --color-btn-primary-hover-text : var(--color-white);
     
@@ -103,14 +83,10 @@
     --color-btn-stroke-hover       : var(--color-gray-19);
     --color-btn-stroke-hover-text  : var(--color-white);
 
-    /* preloader
-     */
     --color-preloader-bg           : var(--color-gray-19);
     --color-loader                 : white;
     --color-loader-light           : rgba(255, 255, 255, 0.1);
 
-    /* others
-     */
     --color-body                   : white;
     --color-border                 : rgba(0, 0, 0, .08);
     --border-radius                : 3px;
@@ -130,8 +106,6 @@
     --base-font-size   : calc(1.8rem * var(--multiplier));
     --space            : calc(3.2rem * var(--multiplier));
 
-    /* vertical spacing 
-     */
     --vspace-0_125     : calc(0.125 * var(--space));
     --vspace-0_25      : calc(0.25 * var(--space));
     --vspace-0_375     : calc(0.375 * var(--space));
@@ -151,24 +125,6 @@
     --vspace-4_5       : calc(4.5 * var(--space));
     --vspace-5         : calc(5 * var(--space));
 
-    /* type scale
-     * ratio 1:2 | base: 18px
-     * -------------------------------------------------------
-     *
-     * --text-display-3 = (77.40px)
-     * --text-display-2 = (64.50px)
-     * --text-display-1 = (53.75px)
-     * --text-xxxl      = (44.79px)
-     * --text-xxl       = (37.32px)
-     * --text-xl        = (31.10px)
-     * --text-lg        = (25.92px)
-     * --text-md        = (21.60px)
-     * --text-size      = (18.00px) BASE
-     * --text-sm        = (15.00px)
-     * --text-xs        = (12.50px)
-     *
-     * ---------------------------------------------------------
-     */
     --text-scale-ratio : 1.2;
     --text-size        : var(--base-font-size);
     --text-xs          : calc((var(--text-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
@@ -182,8 +138,6 @@
     --text-display-2   : calc(var(--text-display-1) * var(--text-scale-ratio));
     --text-display-3   : calc(var(--text-display-2) * var(--text-scale-ratio));
 
-    /* default button height
-     */
     --vspace-btn       : var(--vspace-2);
 }
 
@@ -212,8 +166,6 @@
     --width-narrower : 800px;
     --width-grid-max : var(--width-max);
 
-    /* gutter
-     */
     --gutter         : 2.2rem;
 }
 
@@ -235,12 +187,7 @@
 
 /* ====================================================================
  * # NORMALIZE
- *
- *
- * --------------------------------------------------------------------
- * normalize.css v8.0.1 | MIT License |
- * github.com/necolas/normalize.css
- * -------------------------------------------------------------------- */
+*/
 html {
     line-height              : 1.15;
     -webkit-text-size-adjust : 100%;
@@ -424,8 +371,6 @@ template {
 
 /* ===================================================================
  * # BASE SETUP
- *
- *
  * ------------------------------------------------------------------- */
 html {
     font-size  : var(--base-size);
@@ -991,9 +936,6 @@ td {
 /* --------------------------------------------------------------------
  * ## small screen devices 
  * --------------------------------------------------------------------*/
-
-/* stack columns on small screen devices
- */
 @media screen and (max-width: 400px) {
     .row .row {
         margin-left  : 0;
@@ -1074,24 +1016,6 @@ td {
 
 /* ===================================================================
  * # TYPOGRAPHY 
- *
- *
- * ------------------------------------------------------------------- 
- * type scale - ratio 1:2 | base: 18px
- * -------------------------------------------------------------------
- *
- * --text-display-3 = (77.40px)
- * --text-display-2 = (64.50px)
- * --text-display-1 = (53.75px)
- * --text-xxxl      = (44.79px)
- * --text-xxl       = (37.32px)
- * --text-xl        = (31.10px)
- * --text-lg        = (25.92px)
- * --text-md        = (21.60px)
- * --text-size      = (18.00px) BASE
- * --text-sm        = (15.00px)
- * --text-xs        = (12.50px)
- *
  * -------------------------------------------------------------------- */
 
 /* --------------------------------------------------------------------
@@ -1498,8 +1422,6 @@ hr.fancy::before {
 
 /* ===================================================================
  * # TABLE
- *
- *
  * ------------------------------------------------------------------- */
 table {
     border-width    : 0;

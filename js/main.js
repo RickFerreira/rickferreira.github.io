@@ -1,8 +1,3 @@
-/* ===================================================================
- * Mueller 1.0.0 - Main JS
- *
- * ------------------------------------------------------------------- */
-
 (function(html) {
 
     'use strict';
@@ -524,5 +519,36 @@
         ssMoveTo();
 
     })();
+
+    /* Scroll Spy Lateral
+    * ------------------------------------------------------ */
+   const ssScrollSpyLateral = function() {
+              const sections = document.querySelectorAll('.target-section, #footer');
+       const navLinks = document.querySelectorAll('.s-scroll-nav a');
+
+        const options = {
+           rootMargin: '-50% 0px -50% 0px',
+           threshold: 0
+        };
+
+       const observer = new IntersectionObserver((entries) => {
+           entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                   navLinks.forEach(link => link.classList.remove('active'));
+                   const id = entry.target.getAttribute('id');
+                   const activeLink = document.querySelector(`.s-scroll-nav a[href="#${id}"]`);
+                   if (activeLink) {
+                       activeLink.classList.add('active');
+                   }
+               }
+           });
+       }, options);
+
+       sections.forEach(section => {
+           observer.observe(section);
+       });
+   };
+
+   ssScrollSpyLateral();
 
 })(document.documentElement);

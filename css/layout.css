@@ -1,8 +1,35 @@
 /* ===================================================================
- * # SITE HEADER
- *
- *
+ * # SITE HEADER 
  * ------------------------------------------------------------------- */
+
+/* ===================================================================
+ * # SAFE ZONE
+ * ------------------------------------------------------------------- */
+
+.s-intro,
+.s-about,
+.s-folio,
+.s-services,
+.s-footer{
+    padding-left: 60px; 
+    padding-right: var(--gutter);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 425px) {
+    .s-intro,
+    .s-about,
+    .s-folio,
+    .s-services,
+    .s-footer{
+        padding-left: 25px; 
+        padding-right: var(--gutter);
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 .s-header {
     --header-height  : 80px;
     --logo-width     : 40px;
@@ -44,7 +71,6 @@
 }
 
 .s-header__inner {
-    max-width   : 1400px;
     height      : var(--header-height);
     align-items : center;
     padding     : 0 var(--gutter);
@@ -1459,4 +1485,88 @@
         height : var(--vspace-1_5);
         width  : var(--vspace-1_5);
     }
+}
+/* ------------------------------------------------------------------- 
+ * ## Scroll Navigation (Indicator)
+ * ------------------------------------------------------------------- */
+.s-scroll-nav {
+    position: fixed;
+    top: 50%;
+    left: 3rem; 
+    transform: translateY(-50%);
+    z-index: 900; 
+    display: block;
+}
+
+.s-scroll-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.s-scroll-nav li {
+    margin-bottom: 1.5rem;
+}
+
+.s-scroll-nav a {
+    position: relative;
+    display: block;
+    font-family: var(--font-2); 
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-gray-14);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+    padding-left: 0;
+}
+
+.s-scroll-nav a::before {
+    content: attr(data-num);
+    display: block;
+}
+
+.s-scroll-nav a.active {
+    color: var(--color-1);
+    opacity: 1;
+    font-weight: 700;
+    transform: scale(1.3);
+    padding-left: 35px;
+}
+
+.s-scroll-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-1);
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1200px) {
+    .s-scroll-nav {
+        display: block; /* Garante que apareça (antes estava none) */
+        left: 1.5rem;   /* Puxa mais para a borda esquerda */
+        transform: translateY(-50%) scale(0.8); /* Diminui para 80% do tamanho */
+    }
+}
+
+/* Telas Mobile (600px para baixo) */
+@media screen and (max-width: 600px) {
+    .s-scroll-nav {
+        display: block;
+        left: 0.5rem;   /* Cola bem na borda */
+        transform: translateY(-50%) scale(0.6); /* Diminui para 60% (bem pequeno) */
+        transform-origin: left center; /* Garante que encolha encostado na esquerda */
+    }
+
+    /* Opcional: No mobile, talvez você queira esconder os números inativos
+       para limpar a visão, deixando só a barrinha ativa e o número ativo?
+       Se quiser isso, descomente as linhas abaixo: */
+    
+    /* .s-scroll-nav a { opacity: 0; } 
+    .s-scroll-nav a.active { opacity: 1; } 
+    */
 }
