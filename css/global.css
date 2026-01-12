@@ -14,10 +14,10 @@
 
     /* * MAPPING DA NOVA PALETA:
      * color-1 (Primary Action): #e25134 (Laranja Vivo)
-     * color-2 (Secondary Base): #151c26 (Azul Profundo)
+     * color-2 (Secondary Base): #0c1118 (Azul Profundo)
      */
     --color-1                      : #e25134;
-    --color-2                      : #151c26;
+    --color-2                      : #0c1118;
 
     --color-1-lightest             : #fcece8;
     --color-1-lighter              : #fabfae;
@@ -41,7 +41,7 @@
     --color-notice-content         : hsla(51, 30%, 30%, 1);
 
     --color-black                  : #000000;
-    --color-gray-19                : #151c26;
+    --color-gray-19                : #0c1118;
     --color-gray-18                : #2e363d;
     --color-gray-17                : #424048;
     --color-gray-16                : #585857;

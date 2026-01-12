@@ -501,24 +501,30 @@
 
     }; // end ssMoveTo
 
-
-   /* Initialize
+    /* Typed JS (Animação de Digitação)
     * ------------------------------------------------------ */
-    (function ssInit() {
-
-        ssPreloader();
-        ssMoveHeader();
-        ssMobileMenu();
-        ssScrollSpy();
-        ssMasonry();
-        ssSwiper();
-        ssMailChimpForm();
-        ssLightbox();
-        ssAlertBoxes();
-        ssBackToTop();
-        ssMoveTo();
-
-    })();
+    const ssTyped = function() {
+        
+        const typingElement = document.querySelector('.element-typing');
+        
+        if (typingElement) {
+            new Typed('.element-typing', {
+                strings: [
+                    "Desenvolvedor Full Stack", 
+                    "Bolsista do IDE.IA", 
+                    "Técnico em Informática",
+                    "Estudante de ADS"
+                ],
+                typeSpeed: 60,
+                backSpeed: 30,
+                backDelay: 1000,
+                startDelay: 500,
+                loop: true,
+                showCursor: true, 
+                cursorChar: '|',
+            });
+        }
+    };
 
     /* Scroll Spy Lateral
     * ------------------------------------------------------ */
@@ -549,6 +555,22 @@
        });
    };
 
-   ssScrollSpyLateral();
+   /* Initialize
+    * ------------------------------------------------------ */
+    (function ssInit() {
+        ssPreloader();
+        ssMoveHeader();
+        ssMobileMenu();
+        ssScrollSpy();
+        ssScrollSpyLateral();
+        ssMasonry();
+        ssSwiper();
+        ssMailChimpForm();
+        ssLightbox();
+        ssAlertBoxes();
+        ssBackToTop();
+        ssMoveTo();
+        ssTyped();
+    })();
 
 })(document.documentElement);
