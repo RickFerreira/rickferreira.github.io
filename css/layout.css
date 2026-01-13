@@ -1,11 +1,6 @@
 /* ===================================================================
  * # SITE HEADER 
  * ------------------------------------------------------------------- */
-
-/* ===================================================================
- * # SAFE ZONE
- * ------------------------------------------------------------------- */
-
 .s-header,
 .s-intro,
 .s-about,
@@ -762,37 +757,119 @@
     }
 }
 
-
 /* ===================================================================
  * # ABOUT
- *
- *
  * ------------------------------------------------------------------- */
+
 .s-about {
-    padding-top    : var(--vspace-5);
-    padding-bottom : var(--vspace-5);
+    padding-top: var(--vspace-3);
+    padding-bottom: var(--vspace-3);
+    position: relative;
+    z-index: 1;
+}
+
+.s-about .text-pretitle {
+    color: var(--color-1);
+    font-weight: 700;
+}
+
+.s-about .text-display-1 {
+    color: var(--color-2);
+}
+
+.s-about .desc {
+    color: var(--color-gray-15);
+}
+
+.about-cards-grid {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-cards-grid .column {
+    margin-bottom: 3rem;
+}
+
+.about-card.animate {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-cards-grid .column:nth-child(1) .about-card.animate { animation-delay: 0.1s; }
+.about-cards-grid .column:nth-child(2) .about-card.animate { animation-delay: 0.3s; }
+.about-cards-grid .column:nth-child(3) .about-card.animate { animation-delay: 0.5s; }
+.about-cards-grid .column:nth-child(4) .about-card.animate { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ------------------------------------------------------------------- 
  * responsive:
  * about
  * ------------------------------------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+    .about-cards-grid {
+        display: block; 
+    }
+    
+    .about-cards-grid .column {
+        width: 100% !important;
+        margin-bottom: 2rem;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .s-about {
         padding-top    : var(--vspace-4);
         padding-bottom : var(--vspace-4_5);
     }
+
+    .about-card {
+        padding: 2.4rem;
+    }
+
+    .about-card h3 {
+        font-size: 1.9rem;
+    }
+
+    .about-card p {
+        font-size: 1.5rem;
+    }
+    
+    .about-card .card-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about-card {
+        padding: 2rem;
+    }
+    
+    .tech-badges span {
+        font-size: 1rem;
+        padding: 4px 10px;
+    }
 }
 
 /* ===================================================================
  * # PORTFOLIO
- *
- *
  * ------------------------------------------------------------------- */
+
 .s-folio {
     background-color : var(--color-gray-19);
-    padding-top      : var(--vspace-5);
-    padding-bottom   : var(--vspace-5);
+    padding-top      : var(--vspace-3);
+    padding-bottom   : var(--vspace-3);
 }
 
 /* ------------------------------------------------------------------- 
@@ -1073,8 +1150,6 @@
 
 /* ===================================================================
  * # CLIENTS
- *
- *
  * ------------------------------------------------------------------- */
 .s-clients {
     padding-top : var(--vspace-2);
@@ -1318,54 +1393,6 @@
 }
 
 /* ------------------------------------------------------------------- 
- * ## go top
- * ------------------------------------------------------------------- */
-.ss-go-top {
-    z-index    : 2;
-    opacity    : 0;
-    visibility : hidden;
-    transform  : translate(0, 200%);
-    transition : all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-    position   : fixed;
-    bottom     : 6rem;
-    right      : 4rem;
-}
-
-.ss-go-top a {
-    display          : flex;
-    align-items      : center;
-    justify-content  : center;
-    text-decoration  : none;
-    border           : none;
-    height           : calc(1.875 * var(--space));
-    width            : calc(1.875 * var(--space));
-    border-radius    : 50%;
-    background-color : #0C0C0C;
-    transition       : all .3s;
-    position         : relative;
-}
-
-.ss-go-top a:focus svg path,
-.ss-go-top a:hover svg path {
-    fill : white;
-}
-
-.ss-go-top svg {
-    height : var(--vspace-0_75);
-    width  : var(--vspace-0_75);
-}
-
-.ss-go-top svg path {
-    fill : white;
-}
-
-.ss-go-top.link-is-visible {
-    opacity    : 1;
-    visibility : visible;
-    transform  : translate(0, 0);
-}
-
-/* ------------------------------------------------------------------- 
  * responsive:
  * footer
  * ------------------------------------------------------------------- */
@@ -1486,26 +1513,17 @@
 
 @media screen and (max-width: 1200px) {
     .s-scroll-nav {
-        display: block; /* Garante que apareça (antes estava none) */
-        left: 1.5rem;   /* Puxa mais para a borda esquerda */
-        transform: translateY(-50%) scale(0.8); /* Diminui para 80% do tamanho */
+        display: block;
+        left: 1.5rem;
+        transform: translateY(-50%) scale(0.8);
     }
 }
 
-/* Telas Mobile (600px para baixo) */
 @media screen and (max-width: 600px) {
     .s-scroll-nav {
         display: block;
-        left: 0.5rem;   /* Cola bem na borda */
-        transform: translateY(-50%) scale(0.6); /* Diminui para 60% (bem pequeno) */
-        transform-origin: left center; /* Garante que encolha encostado na esquerda */
+        left: 0.5rem;
+        transform: translateY(-50%) scale(0.6);
+        transform-origin: left center;
     }
-
-    /* Opcional: No mobile, talvez você queira esconder os números inativos
-       para limpar a visão, deixando só a barrinha ativa e o número ativo?
-       Se quiser isso, descomente as linhas abaixo: */
-    
-    /* .s-scroll-nav a { opacity: 0; } 
-    .s-scroll-nav a.active { opacity: 1; } 
-    */
 }

@@ -343,3 +343,162 @@ img,
 .ss-custom-select {
     margin-bottom : var(--vspace-1);
 }
+
+/* --- CARD DE ESPECIALIDADES (ABOUT) --- */
+.about-card {
+    background: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 3.2rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.about-card:hover {
+    transform: translateY(-10px) !important;
+    border-color: var(--color-1);
+    box-shadow: 0 15px 30px rgba(226, 81, 52, 0.15);
+}
+
+.about-card .card-icon {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--color-1);
+}
+
+.about-card .card-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.about-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #151c26;
+}
+
+.about-card p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #666666;
+    margin-bottom: 2.4rem;
+}
+
+/* --- BADGES (ETIQUETAS) --- */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.tech-badges span {
+    font-family: var(--font-2);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: #FFF0ED;
+    color: var(--color-1);
+    border: 1px solid transparent;
+    padding: 6px 14px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover .tech-badges span {
+    background-color: var(--color-1);
+    color: white;
+}
+
+/* --- BOTÃO VOLTAR AO TOPO (GO TOP) --- */
+.ss-go-top {
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 20px);
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+}
+
+.ss-go-top a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: rgba(21, 28, 38, 0.8);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--color-1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ss-go-top svg {
+    height: 2.4rem;
+    width: 2.4rem;
+    stroke: var(--color-1);
+    transition: all 0.3s ease;
+}
+
+.ss-go-top a:hover {
+    background-color: var(--color-1);
+    border-color: var(--color-1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(226, 81, 52, 0.4);
+}
+
+.ss-go-top a:hover svg {
+    stroke: white;
+    transform: translateY(-2px);
+}
+
+.ss-go-top.link-is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+}
+
+/* --- ANIMAÇÕES GERAIS --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.about-card.animate {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* --- RESPONSIVIDADE DOS COMPONENTES --- */
+@media screen and (max-width: 800px) {
+    .about-card { padding: 2.4rem; }
+    .about-card h3 { font-size: 1.9rem; }
+    .about-card p { font-size: 1.5rem; }
+    .about-card .card-icon svg { width: 32px; height: 32px; }
+
+    .ss-go-top { right: 2rem; bottom: 2rem; }
+    .ss-go-top a { height: 4.5rem; width: 4.5rem; }
+    .ss-go-top svg { height: 2.2rem; width: 2.2rem; }
+}
+
+@media screen and (max-width: 400px) {
+    .about-card { padding: 2rem; }
+    .tech-badges span { font-size: 1rem; padding: 4px 10px; }
+    
+    .ss-go-top { right: 1.5rem; bottom: 1.5rem; }
+    .ss-go-top a { height: 4rem; width: 4rem; }
+    .ss-go-top svg { height: 2rem; width: 2rem; }
+}

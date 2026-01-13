@@ -526,6 +526,32 @@
         }
     };
 
+    /* Animate on Scroll (Cards do Sobre)
+    * ------------------------------------------------------ */
+    const ssAnimateOnScroll = function() {
+        
+        const cards = document.querySelectorAll('.about-card');
+        
+        if (!cards) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Adiciona a classe que dispara a animação no CSS
+                    entry.target.classList.add('animate');
+                    // Para de observar depois que animou (para não animar de novo ao subir)
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.2 // Dispara quando 20% do card aparecer na tela
+        });
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    };
+
     /* Scroll Spy Lateral
     * ------------------------------------------------------ */
    const ssScrollSpyLateral = function() {
@@ -570,6 +596,7 @@
         ssAlertBoxes();
         ssBackToTop();
         ssMoveTo();
+        ssAnimateOnScroll();
         ssTyped();
     })();
 
