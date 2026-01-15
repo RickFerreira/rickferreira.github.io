@@ -581,6 +581,36 @@
        });
    };
 
+   /* ===================================================================
+    * Animar Portfólio ao Scroll (Intersection Observer)
+    * ------------------------------------------------------------------- */
+    const animateBricks = function() {
+        
+        // Seleciona todos os blocos do portfólio
+        const bricks = document.querySelectorAll('.bricks-wrapper .brick');
+        
+        // Configura o observador (dispara quando 10% do item estiver visível)
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Adiciona a classe que tem o CSS de animação
+                    entry.target.classList.add('animate');
+                    // Para de observar este item (animação acontece só uma vez)
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1, // 10% de visibilidade para disparar
+            rootMargin: "0px"
+        });
+
+        // Manda o observador vigiar cada brick
+        bricks.forEach(brick => {
+            observer.observe(brick);
+        });
+    };   
+
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
@@ -598,6 +628,7 @@
         ssMoveTo();
         ssAnimateOnScroll();
         ssTyped();
+        animateBricks();
     })();
 
 })(document.documentElement);

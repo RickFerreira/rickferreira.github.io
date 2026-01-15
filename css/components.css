@@ -502,3 +502,94 @@ img,
     .ss-go-top a { height: 4rem; width: 4rem; }
     .ss-go-top svg { height: 2rem; width: 2rem; }
 }
+
+/* ===================================================================
+ * # ESTILOS DO MODAL E BOTÕES DO PORTFÓLIO
+ * ------------------------------------------------------------------- */
+
+.modal-popup__buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem; 
+    flex-wrap: wrap;
+}
+
+.btn-modal {
+    display: inline-block;
+    font-family: var(--font-1);
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-git {
+    color: #151c26;
+    border-color: #151c26;
+    background: transparent;
+}
+
+.btn-git:hover {
+    background: #151c26;
+    color: white;
+}
+
+.btn-live {
+    background: var(--color-1);
+    color: white;
+    border-color: var(--color-1);
+}
+
+.btn-live:hover {
+    background: var(--color-1);
+    border-color: var(--color-1);
+}
+
+.modal-popup__details {
+    display: none;
+}
+
+.portfolio-cta {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.portfolio-cta .btn {
+    margin-top: 0;
+}
+
+/* ===================================================================
+ * # ANIMAÇÕES DO PORTFÓLIO
+ * ------------------------------------------------------------------- */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.bricks-wrapper .brick {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.bricks-wrapper .brick.animate {
+    animation: fadeInUp 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.bricks-wrapper .brick:nth-child(1) { animation-delay: 0.1s; }
+.bricks-wrapper .brick:nth-child(2) { animation-delay: 0.2s; }
+.bricks-wrapper .brick:nth-child(3) { animation-delay: 0.3s; }
+.bricks-wrapper .brick:nth-child(4) { animation-delay: 0.4s; }
+.bricks-wrapper .brick:nth-child(5) { animation-delay: 0.5s; }
+.bricks-wrapper .brick:nth-child(6) { animation-delay: 0.6s; }
