@@ -19,10 +19,10 @@
 <p align="center">
   <a href="#-sobre-o-projeto">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-features">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-features-e-personalizações">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-executar">Como Executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-créditos">Créditos</a>
+  <a href="#-créditos-e-licença">Créditos</a>
 </p>
 
 <br>
@@ -59,10 +59,10 @@ Embora baseado em um template, o projeto sofreu **refatorações profundas** par
 
 - **Responsividade:** Ajustes manuais de Media Queries para garantir leitura perfeita em celulares, tablets e desktops.
 - **Seção de Projetos:** Cards dinâmicos para exibição de trabalhos realizados.
-- **Animações:** Pequenas animações interatividade que deixam o site visualmente mais bonito.
+- **Animações:** Pequenas animações e interatividade que deixam o site visualmente mais bonito.
 - **Timeline de Carreira:** Seção estilizada mostrando a evolução profissional e acadêmica.
-- **Padrão de cores e fontes:** Escolha especifica de fonte, cores e outras estilizações, que mostram um pouco da minha personalidade.
-- **Animação de Digitação:** Desde da primeira versão desse portifólio, eu adicionei logo no início uma animação que fazia o texto mudar e resolvi manter.
+- **Padrão de cores e fontes:** Escolha específica de fonte, cores e outras estilizações, que mostram um pouco da minha personalidade.
+- **Animação de Digitação:** Desde a primeira versão desse portfólio, eu adicionei logo no início uma animação que fazia o texto mudar e resolvi manter.
 
 ---
 
@@ -74,7 +74,7 @@ O design foca na experiência do usuário (UX), utilizando contraste alto para f
 
 | Cor              | Hex       | Uso                  |
 | ---------------- | --------- | -------------------- |
-| ⚫ Azul Profundo | `#0c1118` | Background Principal |
+| ⚫ Azul Profundo | `#050505` | Background Principal |
 | 🟠 Laranja Vivo  | `#e25134` | Destaques e Botões   |
 | ⚪ Branco        | `#FFFFFF` | Títulos e Textos     |
 | 🔘 Cinza         | `#888888` | Textos secundários   |
@@ -94,7 +94,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/RickFerreira/rickferreira.github.io.git
+$ git clone [https://github.com/RickFerreira/rickferreira.github.io.git](https://github.com/RickFerreira/rickferreira.github.io.git)
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd rickferreira.github.io
@@ -104,6 +104,7 @@ $ code .
 
 # Dica: Instale a extensão "Live Server" no VS Code
 # Clique com botão direito no index.html e escolha "Open with Live Server"
+
 ```
 
 O site abrirá no seu navegador padrão (geralmente em `http://127.0.0.1:5500/index.html`).
@@ -114,8 +115,8 @@ O site abrirá no seu navegador padrão (geralmente em `http://127.0.0.1:5500/in
 
 Este projeto foi **adaptado e personalizado** por Richard Salviano.
 
-- **Design Base:** Template original criado pela [StyleShout](https://styleshout.com/).
-- **Implementação & Modificações:** Código refatorado, traduzido e customizado por [Richard Salviano](https://github.com/RickFerreira).
+* **Design Base:** Template original criado pela [StyleShout](https://styleshout.com/).
+* **Implementação & Modificações:** Código refatorado, traduzido e customizado por [Richard Salviano](https://github.com/RickFerreira).
 
 Sinta-se à vontade para usar este código como estudo, mantendo os devidos créditos.
 
@@ -124,17 +125,22 @@ Sinta-se à vontade para usar este código como estudo, mantendo os devidos cré
 ## 👨‍💻 Autor
 
 <table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/RickFerreira">
-        <img src="https://avatars.githubusercontent.com/u/40415279?v=4" width="100px;" alt="Foto do Rick"/><br>
-        <sub><b>Richard Salviano</b></sub>
-      </a>
-    </td>
-  </tr>
+<tr>
+<td align="center">
+<a href="https://github.com/RickFerreira">
+<img src="https://avatars.githubusercontent.com/u/40415279?v=4" width="100px;" alt="Foto do Rick"/>
+
+<sub><b>Richard Salviano</b></sub>
+</a>
+</td>
+</tr>
 </table>
 
 <div align="center">
-  <a href="#top">☝🏽 Voltar ao topo</a>
+<a href="#top">☝🏽 Voltar ao topo</a>
 </div>
 <br />
+
+```
+
+```
